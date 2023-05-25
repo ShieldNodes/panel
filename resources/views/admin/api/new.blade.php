@@ -1,15 +1,15 @@
 @extends('layouts.admin')
 
 @section('title')
-    Application API
+    API приложения
 @endsection
 
 @section('content-header')
-    <h1>Application API<small>Create a new application API key.</small></h1>
+    <h1>API приложения<small>Создайте новый ключ API приложения.</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Admin</a></li>
-        <li><a href="{{ route('admin.api.index') }}">Application API</a></li>
-        <li class="active">New Credentials</li>
+        <li><a href="{{ route('admin.index') }}">Администратор</a></li>
+        <li><a href="{{ route('admin.api.index') }}">API приложения</a></li>
+        <li class="active">Новый API-ключ</li>
     </ol>
 @endsection
 
@@ -19,7 +19,7 @@
             <div class="col-sm-8 col-xs-12">
                 <div class="box box-primary">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Select Permissions</h3>
+                        <h3 class="box-title">Выберите разрешения</h3>
                     </div>
                     <div class="box-body table-responsive no-padding">
                         <table class="table table-hover">
@@ -28,15 +28,15 @@
                                     <td class="col-sm-3 strong">{{ str_replace('_', ' ', title_case($resource)) }}</td>
                                     <td class="col-sm-3 radio radio-primary text-center">
                                         <input type="radio" id="r_{{ $resource }}" name="r_{{ $resource }}" value="{{ $permissions['r'] }}">
-                                        <label for="r_{{ $resource }}">Read</label>
+                                        <label for="r_{{ $resource }}">Читать</label>
                                     </td>
                                     <td class="col-sm-3 radio radio-primary text-center">
                                         <input type="radio" id="rw_{{ $resource }}" name="r_{{ $resource }}" value="{{ $permissions['rw'] }}">
-                                        <label for="rw_{{ $resource }}">Read &amp; Write</label>
+                                        <label for="rw_{{ $resource }}">Читать &amp; Писать</label>
                                     </td>
                                     <td class="col-sm-3 radio text-center">
                                         <input type="radio" id="n_{{ $resource }}" name="r_{{ $resource }}" value="{{ $permissions['n'] }}" checked>
-                                        <label for="n_{{ $resource }}">None</label>
+                                        <label for="n_{{ $resource }}">Отсутствует</label>
                                     </td>
                                 </tr>
                             @endforeach
@@ -51,11 +51,11 @@
                             <label class="control-label" for="memoField">Description <span class="field-required"></span></label>
                             <input id="memoField" type="text" name="memo" class="form-control">
                         </div>
-                        <p class="text-muted">Once you have assigned permissions and created this set of credentials you will be unable to come back and edit it. If you need to make changes down the road you will need to create a new set of credentials.</p>
+                        <p class="text-muted">После назначения прав доступа и создания этого набора учетных данных вы не сможете вернуться и отредактировать его. Если в дальнейшем вам понадобится внести изменения, вам нужно будет создать новый набор учетных данных.</p>
                     </div>
                     <div class="box-footer">
                         {{ csrf_field() }}
-                        <button type="submit" class="btn btn-success btn-sm pull-right">Create Credentials</button>
+                        <button type="submit" class="btn btn-success btn-sm pull-right">Создать API-ключ</button>
                     </div>
                 </div>
             </div>

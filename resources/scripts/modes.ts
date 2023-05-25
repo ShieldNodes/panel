@@ -22,7 +22,7 @@ const modes: Mode[] = [
     { name: 'CQL', mime: 'text/x-cassandra', mode: 'sql', ext: ['cql'] },
     { name: 'Diff', mime: 'text/x-diff', mode: 'diff', ext: ['diff', 'patch'] },
     { name: 'Dockerfile', mime: 'text/x-dockerfile', mode: 'dockerfile', file: /^Dockerfile$/ },
-    { name: 'Git Markdown', mime: 'text/x-gfm', mode: 'gfm', file: /^(readme|contributing|history|license).md$/i },
+    { name: 'Разметка Git', mime: 'text/x-gfm', mode: 'gfm', file: /^(readme|contributing|history|license).md$/i },
     { name: 'Golang', mime: 'text/x-go', mode: 'go', ext: ['go'] },
     { name: 'HTML', mime: 'text/html', mode: 'htmlmixed', ext: ['html', 'htm', 'handlebars', 'hbs'], alias: ['xhtml'] },
     { name: 'HTTP', mime: 'message/http', mode: 'http' },
@@ -61,7 +61,7 @@ const modes: Mode[] = [
         mode: 'php',
         ext: ['php', 'php3', 'php4', 'php5', 'php7', 'phtml'],
     },
-    { name: 'Plain Text', mime: 'text/plain', mode: 'null', ext: ['txt', 'text', 'conf', 'def', 'list', 'log'] },
+    { name: 'Обычный текст', mime: 'text/plain', mode: 'null', ext: ['txt', 'text', 'conf', 'def', 'list', 'log'] },
     { name: 'PostgreSQL', mime: 'text/x-pgsql', mode: 'sql' },
     {
         name: 'Properties',
