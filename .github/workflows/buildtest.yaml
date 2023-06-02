@@ -29,8 +29,5 @@ jobs:
     - name: Install yarn dependencies
       run: yarn
 
-    - name: Rebuild the Panel frontend
-      run: export NODE_OPTIONS=--openssl-legacy-provider\
-
     - name: Build production assets
       run: yarn build:production
