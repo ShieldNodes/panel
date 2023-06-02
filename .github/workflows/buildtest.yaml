@@ -17,20 +17,14 @@ jobs:
     - name: Set permissions
       run: chmod -R 755 storage/* bootstrap/cache/
       
-    - name: Copy .env.example
-      run: cp .env.example .env
-      
     - name: Install dependencies
       run: composer install --no-dev --optimize-autoloader
       
-    - name: Generate application key
-      run: php artisan key:generate --force
-      
-    - name: Rebuild the Panel frontend
-      run: export NODE_OPTIONS=--openssl-legacy-provider
-
     - name: Install yarn dependencies
       run: yarn
+
+    - name: Rebuild the Panel frontend
+      run: export NODE_OPTIONS=--openssl-legacy-provider\
       
     - name: Build production assets
       run: yarn build:production
