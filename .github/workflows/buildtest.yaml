@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    
+
     - name: Checkout code
       uses: actions/checkout@v2
       
@@ -26,6 +26,9 @@ jobs:
     - name: Generate application key
       run: php artisan key:generate --force
       
+    - name: Rebuild the Panel frontend
+      run: export NODE_OPTIONS=--openssl-legacy-provider
+
     - name: Install yarn dependencies
       run: yarn
       
