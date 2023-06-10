@@ -54,7 +54,7 @@ export default () => {
                 updateToken(uuid, socket);
             } else {
                 setError(
-                    'Произошла ошибка при проверке учетных данных, предоставленных для вебсокета. Пожалуйста, обновите страницу.'
+                    'There was an error validating the credentials provided for the websocket. Please refresh the page.'
                 );
             }
         });
@@ -112,7 +112,7 @@ export default () => {
                         <>
                             <Spinner size={'small'} />
                             <p css={tw`ml-2 text-sm text-red-100`}>
-                                У нас возникли проблемы с подключением к вашему серверу, пожалуйста, подождите...
+                                We&apos;re having some trouble connecting to your server, please wait...
                             </p>
                         </>
                     ) : (

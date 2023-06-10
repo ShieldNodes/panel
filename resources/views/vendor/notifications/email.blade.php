@@ -88,9 +88,9 @@ $style = [
                                                 {{ $greeting }}
                                             @else
                                                 @if ($level == 'error')
-                                                    Ой!
+                                                    Whoops!
                                                 @else
-                                                    Здравствуйте!
+                                                    Hello!
                                                 @endif
                                             @endif
                                         </h1>
@@ -140,7 +140,7 @@ $style = [
 
                                         <!-- Salutation -->
                                         <p style="{{ $style['paragraph'] }}">
-                                            С наилучшими пожеланиями, <br>{{ config('app.name') }}
+                                            Regards,<br>{{ config('app.name') }}
                                         </p>
 
                                         <!-- Sub Copy -->
@@ -149,7 +149,8 @@ $style = [
                                                 <tr>
                                                     <td style="{{ $fontFamily }}">
                                                         <p style="{{ $style['paragraph-sub'] }}">
-                                                            Если у вас возникли проблемы с нажатием кнопки "{{ $actionText }}", скопируйте и вставьте URL-адрес ниже в ваш веб-браузер:
+                                                            If you’re having trouble clicking the "{{ $actionText }}" button,
+                                                            copy and paste the URL below into your web browser:
                                                         </p>
 
                                                         <p style="{{ $style['paragraph-sub'] }}">
@@ -176,7 +177,7 @@ $style = [
                                         <p style="{{ $style['paragraph-sub'] }}">
                                             &copy; {{ date('Y') }}
                                             <a style="{{ $style['anchor'] }}" href="{{ url('/') }}" target="_blank">{{ config('app.name') }}</a>.
-                                            Все права защищены
+                                            All rights reserved.
                                         </p>
                                     </td>
                                 </tr>

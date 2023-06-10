@@ -1,14 +1,14 @@
 @extends('layouts.admin')
 
 @section('title')
-    API приложения
+    Application API
 @endsection
 
 @section('content-header')
-    <h1>API приложения<small>Управление учетными данными доступа для управления этой панелью через API.</small></h1>
+    <h1>Application API<small>Control access credentials for managing this Panel via the API.</small></h1>
     <ol class="breadcrumb">
-        <li><a href="{{ route('admin.index') }}">Администратор</a></li>
-        <li class="active">API приложения</li>
+        <li><a href="{{ route('admin.index') }}">Admin</a></li>
+        <li class="active">Application API</li>
     </ol>
 @endsection
 
@@ -17,18 +17,18 @@
         <div class="col-xs-12">
             <div class="box box-primary">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Список ключей</h3>
+                    <h3 class="box-title">Credentials List</h3>
                     <div class="box-tools">
-                        <a href="{{ route('admin.api.new') }}" class="btn btn-sm btn-primary">Создать новый</a>
+                        <a href="{{ route('admin.api.new') }}" class="btn btn-sm btn-primary">Create New</a>
                     </div>
                 </div>
                 <div class="box-body table-responsive no-padding">
                     <table class="table table-hover">
                         <tr>
-                            <th>Ключ</th>
-                            <th>Памятка</th>
-                            <th>Последнее использование</th>
-                            <th>Создан</th>
+                            <th>Key</th>
+                            <th>Memo</th>
+                            <th>Last Used</th>
+                            <th>Created</th>
                             <th></th>
                         </tr>
                         @foreach($keys as $key)
@@ -66,12 +66,12 @@
                 event.preventDefault();
                 swal({
                     type: 'error',
-                    title: 'Отозвать ключ API',
-                    text: 'После отзыва этого API-ключа все приложения, использующие его в данный момент, перестанут работать.',
+                    title: 'Revoke API Key',
+                    text: 'Once this API key is revoked any applications currently using it will stop working.',
                     showCancelButton: true,
                     allowOutsideClick: true,
                     closeOnConfirm: false,
-                    confirmButtonText: 'Отозвать',
+                    confirmButtonText: 'Revoke',
                     confirmButtonColor: '#d9534f',
                     showLoaderOnConfirm: true
                 }, function () {
@@ -85,15 +85,15 @@
                         swal({
                             type: 'success',
                             title: '',
-                            text: 'Ключ API был отозван.'
+                            text: 'API Key has been revoked.'
                         });
                         self.parent().parent().slideUp();
                     }).fail(function (jqXHR) {
                         console.error(jqXHR);
                         swal({
                             type: 'error',
-                            title: 'Ой!',
-                            text: 'При попытке отозвать этот ключ произошла ошибка.'
+                            title: 'Whoops!',
+                            text: 'An error occurred while attempting to revoke this key.'
                         });
                     });
                 });

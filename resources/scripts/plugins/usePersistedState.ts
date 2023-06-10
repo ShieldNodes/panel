@@ -10,7 +10,7 @@ export function usePersistedState<S = undefined>(
 
             return JSON.parse(item || String(defaultValue));
         } catch (e) {
-            console.warn('Не удалось получить сохраняемое значение из хранилища.', e);
+            console.warn('Failed to retrieve persisted value from store.', e);
 
             return defaultValue;
         }

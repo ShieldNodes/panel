@@ -16,19 +16,19 @@ export default () => {
         <ScreenBlock
             title={'Running Installer'}
             image={ServerInstallSvg}
-            message={'Ваш сервер скоро будет готов, пожалуйста, повторите попытку через несколько минут.'}
+            message={'Your server should be ready soon, please try again in a few minutes.'}
         />
     ) : status === 'suspended' ? (
         <ScreenBlock
             title={'Server Suspended'}
             image={ServerErrorSvg}
-            message={'Этот сервер приостановлен и не может быть доступен.'}
+            message={'This server is suspended and cannot be accessed.'}
         />
     ) : isNodeUnderMaintenance ? (
         <ScreenBlock
             title={'Node under Maintenance'}
             image={ServerErrorSvg}
-            message={'Нода этого сервера в настоящее время находится на техническом обслуживании.'}
+            message={'The node of this server is currently under maintenance.'}
         />
     ) : (
         <ScreenBlock
@@ -36,8 +36,8 @@ export default () => {
             image={ServerRestoreSvg}
             message={
                 isTransferring
-                    ? 'Ваш сервер переносится на новую ноду, пожалуйста, проверьте позже.'
-                    : 'Ваш сервер в настоящее время восстанавливается из резервной копии, пожалуйста, зайдите через несколько минут.'
+                    ? 'Your server is being transferred to a new node, please check back later.'
+                    : 'Your server is currently being restored from a backup, please check back in a few minutes.'
             }
         />
     );

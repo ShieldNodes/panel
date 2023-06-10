@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="alert alert-danger">
-                    Ваша панель настроена в настоящее время для чтения настроек только из среды выполнения. Вам необходимо установить <code>APP_ENVIRONMENT_ONLY=false</code> в вашем файле среды, чтобы динамически загрузить настройки.
+                    Your Panel is currently configured to read settings from the environment only. You will need to set <code>APP_ENVIRONMENT_ONLY=false</code> in your environment file in order to load settings dynamically.
                 </div>
             </div>
         </div>

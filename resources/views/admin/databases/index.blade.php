@@ -1,14 +1,14 @@
 @extends('layouts.admin')
 
 @section('title')
-    Базы данных
+    Database Hosts
 @endsection
 
 @section('content-header')
-    <h1>Базы данных<small>Хосты баз данных, на которых на серверах могут быть созданы базы данных.</small></h1>
+    <h1>Database Hosts<small>Database hosts that servers can have databases created on.</small></h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('admin.index') }}">Admin</a></li>
-        <li class="active">Базы данных</li>
+        <li class="active">Database Hosts</li>
     </ol>
 @endsection
 
@@ -17,9 +17,9 @@
     <div class="col-xs-12">
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Список хостов</h3>
+                <h3 class="box-title">Host List</h3>
                 <div class="box-tools">
-                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#newHostModal">Добавить новый</button>
+                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#newHostModal">Create New</button>
                 </div>
             </div>
             <div class="box-body table-responsive no-padding">
@@ -27,12 +27,12 @@
                     <tbody>
                         <tr>
                             <th>ID</th>
-                            <th>Имя</th>
-                            <th>Хост</th>
-                            <th>Порт</th>
-                            <th>Имя пользователя</th>
-                            <th class="text-center">Баз данных</th>
-                            <th class="text-center">Нода</th>
+                            <th>Name</th>
+                            <th>Host</th>
+                            <th>Port</th>
+                            <th>Username</th>
+                            <th class="text-center">Databases</th>
+                            <th class="text-center">Node</th>
                         </tr>
                         @foreach ($hosts as $host)
                             <tr>

@@ -43,7 +43,7 @@
                 </a>
                 <nav class="navbar navbar-static-top">
                     <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-                        <span class="sr-only">Переключить навигацию</span>
+                        <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -52,7 +52,7 @@
                         <ul class="nav navbar-nav">
                             <li class="user-menu">
                                 <a href="{{ route('account') }}">
-                                    <img src="https://www.gravatar.com/avatar/{{ md5(strtolower(Auth::user()->email)) }}?s=160" class="user-image" alt="Изображение пользователя">
+                                    <img src="https://www.gravatar.com/avatar/{{ md5(strtolower(Auth::user()->email)) }}?s=160" class="user-image" alt="User Image">
                                     <span class="hidden-xs">{{ Auth::user()->name_first }} {{ Auth::user()->name_last }}</span>
                                 </a>
                             </li>
@@ -69,57 +69,57 @@
             <aside class="main-sidebar">
                 <section class="sidebar">
                     <ul class="sidebar-menu">
-                        <li class="header">БАЗОВАЯ АДМИНИСТРАЦИЯ</li>
+                        <li class="header">BASIC ADMINISTRATION</li>
                         <li class="{{ Route::currentRouteName() !== 'admin.index' ?: 'active' }}">
                             <a href="{{ route('admin.index') }}">
-                                <i class="fa fa-home"></i> <span>Обзор</span>
+                                <i class="fa fa-home"></i> <span>Overview</span>
                             </a>
                         </li>
                         <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.settings') ?: 'active' }}">
                             <a href="{{ route('admin.settings')}}">
-                                <i class="fa fa-wrench"></i> <span>Параметры</span>
+                                <i class="fa fa-wrench"></i> <span>Settings</span>
                             </a>
                         </li>
                         <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.api') ?: 'active' }}">
                             <a href="{{ route('admin.api.index')}}">
-                                <i class="fa fa-gamepad"></i> <span>API приложения</span>
+                                <i class="fa fa-gamepad"></i> <span>Application API</span>
                             </a>
                         </li>
-                        <li class="header">УПРАВЛЕНИЕ</li>
+                        <li class="header">MANAGEMENT</li>
                         <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.databases') ?: 'active' }}">
                             <a href="{{ route('admin.databases') }}">
-                                <i class="fa fa-database"></i> <span>Базы данных</span>
+                                <i class="fa fa-database"></i> <span>Databases</span>
                             </a>
                         </li>
                         <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.locations') ?: 'active' }}">
                             <a href="{{ route('admin.locations') }}">
-                                <i class="fa fa-globe"></i> <span>Локации</span>
+                                <i class="fa fa-globe"></i> <span>Locations</span>
                             </a>
                         </li>
                         <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.nodes') ?: 'active' }}">
                             <a href="{{ route('admin.nodes') }}">
-                                <i class="fa fa-sitemap"></i> <span>Ноды</span>
+                                <i class="fa fa-sitemap"></i> <span>Nodes</span>
                             </a>
                         </li>
                         <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.servers') ?: 'active' }}">
                             <a href="{{ route('admin.servers') }}">
-                                <i class="fa fa-server"></i> <span>Серверы</span>
+                                <i class="fa fa-server"></i> <span>Servers</span>
                             </a>
                         </li>
                         <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.users') ?: 'active' }}">
                             <a href="{{ route('admin.users') }}">
-                                <i class="fa fa-users"></i> <span>Пользователи</span>
+                                <i class="fa fa-users"></i> <span>Users</span>
                             </a>
                         </li>
-                        <li class="header">УПРАВЛЕНИЕ УСЛУГАМИ</li>
+                        <li class="header">SERVICE MANAGEMENT</li>
                         <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.mounts') ?: 'active' }}">
                             <a href="{{ route('admin.mounts') }}">
-                                <i class="fa fa-magic"></i> <span>Монтирование</span>
+                                <i class="fa fa-magic"></i> <span>Mounts</span>
                             </a>
                         </li>
                         <li class="{{ ! starts_with(Route::currentRouteName(), 'admin.nests') ?: 'active' }}">
                             <a href="{{ route('admin.nests') }}">
-                                <i class="fa fa-th-large"></i> <span>Гнезда</span>
+                                <i class="fa fa-th-large"></i> <span>Nests</span>
                             </a>
                         </li>
                     </ul>
@@ -134,7 +134,7 @@
                         <div class="col-xs-12">
                             @if (count($errors) > 0)
                                 <div class="alert alert-danger">
-                                    Ошибка при проверке предоставленных данных.<br><br>
+                                    There was an error validating the data provided.<br><br>
                                     <ul>
                                         @foreach ($errors->all() as $error)
                                             <li>{{ $error }}</li>
@@ -159,8 +159,7 @@
                     <strong><i class="fa fa-fw {{ $appIsGit ? 'fa-git-square' : 'fa-code-fork' }}"></i></strong> {{ $appVersion }}<br />
                     <strong><i class="fa fa-fw fa-clock-o"></i></strong> {{ round(microtime(true) - LARAVEL_START, 3) }}s
                 </div>
-                Copyright &copy; 2015 - {{ date('Y') }} <a href="https://pterodactyl.io/">Pterodactyl Software
-                Copyright &copy; 2023 - {{ date('Y') }} <a href="https://shieldnodes.host/">ShieldNodes</a>.
+                Copyright &copy; 2015 - {{ date('Y') }} <a href="https://pterodactyl.io/">Pterodactyl Software</a>.
             </footer>
         </div>
         @section('footer-scripts')
@@ -184,12 +183,12 @@
 
                         var that = this;
                         swal({
-                            title: 'Хотите выйти из системы?',
+                            title: 'Do you want to log out?',
                             type: 'warning',
                             showCancelButton: true,
                             confirmButtonColor: '#d9534f',
                             cancelButtonColor: '#d33',
-                            confirmButtonText: 'Выйти из системы'
+                            confirmButtonText: 'Log out'
                         }, function () {
                              $.ajax({
                                 type: 'POST',
