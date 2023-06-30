@@ -171,7 +171,7 @@ export default () => {
         };
 
         if (connected && instance) {
-            // Do not clear the console if the server is being transferred.
+            // Не очищать консоль, если сервер переносится.
             if (!isTransferring) {
                 terminal.clear();
             }
@@ -206,8 +206,8 @@ export default () => {
                     <input
                         className={classNames('peer', styles.command_input)}
                         type={'text'}
-                        placeholder={'Type a command...'}
-                        aria-label={'Console command input.'}
+                        placeholder={'Введите команду...'}
+                        aria-label={'Ввод консольной команды.'}
                         disabled={!instance || !connected}
                         onKeyDown={handleCommandKeyDown}
                         autoCorrect={'off'}

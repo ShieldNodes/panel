@@ -20,7 +20,7 @@ function bytesToString(bytes: number, decimals = 2): string {
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     const value = Number((bytes / Math.pow(k, i)).toFixed(decimals));
 
-    return `${value} ${['Байты', 'КиБ', 'МиБ', 'ГиБ', 'ТиБ'][i]}`;
+    return `${value} ${['Байт', 'КиБ', 'МиБ', 'ГиБ', 'ТиБ'][i]}`;
 }
 
 /**
