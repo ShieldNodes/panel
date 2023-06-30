@@ -68,20 +68,20 @@ export default () => {
 
     return (
         <>
-            <ChartBlock title={'CPU Load'}>
+            <ChartBlock title={'Нагрузка процессора'}>
                 <Line {...cpu.props} />
             </ChartBlock>
-            <ChartBlock title={'Memory'}>
+            <ChartBlock title={'Оперативная аамять'}>
                 <Line {...memory.props} />
             </ChartBlock>
             <ChartBlock
-                title={'Network'}
+                title={'Трафик'}
                 legend={
                     <>
-                        <Tooltip arrow content={'Inbound'}>
+                        <Tooltip arrow content={'Входящий'}>
                             <CloudDownloadIcon className={'mr-2 w-4 h-4 text-yellow-400'} />
                         </Tooltip>
-                        <Tooltip arrow content={'Outbound'}>
+                        <Tooltip arrow content={'Исходящий'}>
                             <CloudUploadIcon className={'w-4 h-4 text-cyan-400'} />
                         </Tooltip>
                     </>
