@@ -2,25 +2,25 @@
 
 return [
     'notices' => [
-        'created' => 'A new nest, :name, has been successfully created.',
-        'deleted' => 'Successfully deleted the requested nest from the Panel.',
-        'updated' => 'Successfully updated the nest configuration options.',
+        'created' => 'Новое гнездо :name было успешно создано.',
+        'deleted' => 'Успешно удалено запрошенное гнездо из панели.',
+        'updated' => 'Успешно обновлены настройки конфигурации гнезда.',
     ],
     'eggs' => [
         'notices' => [
-            'imported' => 'Successfully imported this Egg and its associated variables.',
-            'updated_via_import' => 'This Egg has been updated using the file provided.',
-            'deleted' => 'Successfully deleted the requested egg from the Panel.',
-            'updated' => 'Egg configuration has been updated successfully.',
-            'script_updated' => 'Egg install script has been updated and will run whenever servers are installed.',
-            'egg_created' => 'A new egg was laid successfully. You will need to restart any running daemons to apply this new egg.',
+            'imported' => 'Это яйцо и связанные с ним переменные успешно импортированы.',
+            'updated_via_import' => 'Это яйцо было обновлено с использованием предоставленного файла.',
+            'deleted' => 'Успешно удалено запрошенное яйцо из панели.',
+            'updated' => 'Конфигурация яйца была успешно обновлена.',
+            'script_updated' => 'Установочный скрипт яйца был обновлен и будет запущен каждый раз при установке серверов.',
+            'egg_created' => 'Новое яйцо было успешно создано. Вам необходимо перезапустить все работающие демоны, чтобы применить это новое яйцо.',
         ],
     ],
     'variables' => [
         'notices' => [
-            'variable_deleted' => 'The variable ":variable" has been deleted and will no longer be available to servers once rebuilt.',
-            'variable_updated' => 'The variable ":variable" has been updated. You will need to rebuild any servers using this variable in order to apply changes.',
-            'variable_created' => 'New variable has successfully been created and assigned to this egg.',
+            'variable_deleted' => 'Переменная ":variable" была удалена и больше не будет доступна серверам после их переустановки.',
+            'variable_updated' => 'Переменная ":variable" была обновлена. Вам необходимо переустановить серверы, использующие эту переменную, чтобы применить изменения.',
+            'variable_created' => 'Новая переменная была успешно создана и назначена этому яйцу.',
         ],
     ],
 ];

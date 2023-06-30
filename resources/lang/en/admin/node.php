@@ -2,15 +2,15 @@
 
 return [
     'validation' => [
-        'fqdn_not_resolvable' => 'The FQDN or IP address provided does not resolve to a valid IP address.',
-        'fqdn_required_for_ssl' => 'A fully qualified domain name that resolves to a public IP address is required in order to use SSL for this node.',
+        'fqdn_not_resolvable' => 'Указанный полностью определенный доменное имя (FQDN) или IP-адрес не преобразуется в допустимый IP-адрес.',
+        'fqdn_required_for_ssl' => 'Для использования SSL на этом узле требуется полностью определенное доменное имя (FQDN), которое преобразуется в общедоступный IP-адрес.',
     ],
     'notices' => [
-        'allocations_added' => 'Allocations have successfully been added to this node.',
-        'node_deleted' => 'Node has been successfully removed from the panel.',
-        'location_required' => 'You must have at least one location configured before you can add a node to this panel.',
-        'node_created' => 'Successfully created new node. You can automatically configure the daemon on this machine by visiting the \'Configuration\' tab. <strong>Before you can add any servers you must first allocate at least one IP address and port.</strong>',
-        'node_updated' => 'Node information has been updated. If any daemon settings were changed you will need to reboot it for those changes to take effect.',
-        'unallocated_deleted' => 'Deleted all un-allocated ports for <code>:ip</code>.',
+        'allocations_added' => 'Выделения успешно добавлены к этому узлу.',
+        'node_deleted' => 'Узел успешно удален из панели.',
+        'location_required' => 'Прежде чем вы сможете добавить узел в эту панель, вы должны иметь как минимум одно настроенное расположение.',
+        'node_created' => 'Успешно создан новый узел. Вы можете автоматически настроить демона на этой машине, посетив вкладку «Настройка». <strong>Прежде чем вы сможете добавить какие-либо серверы, вам необходимо выделить как минимум один IP-адрес и порт.</strong>',
+        'node_updated' => 'Информация об узле была обновлена. Если были изменены настройки демона, вам необходимо перезагрузить его, чтобы изменения вступили в силу.',
+        'unallocated_deleted' => 'Удалены все нераспределенные порты для <code>:ip</code>.',
     ],
 ];
