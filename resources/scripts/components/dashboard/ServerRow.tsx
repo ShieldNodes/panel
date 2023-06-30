@@ -64,8 +64,8 @@ export default ({ server, className }: { server: Server; className?: string }) =
     }, [stats?.isSuspended, server.status]);
 
     useEffect(() => {
-        // Don't waste a HTTP request if there is nothing important to show to the user because
-        // the server is suspended.
+        // Не тратьте HTTP-запрос, если пользователю нечего показать, потому что
+        // сервер приостановлен.
         if (isSuspended) return;
 
         getStats().then(() => {
@@ -84,9 +84,9 @@ export default ({ server, className }: { server: Server; className?: string }) =
         alarms.disk = server.limits.disk === 0 ? false : isAlarmState(stats.diskUsageInBytes, server.limits.disk);
     }
 
-    const diskLimit = server.limits.disk !== 0 ? bytesToString(mbToBytes(server.limits.disk)) : 'Unlimited';
-    const memoryLimit = server.limits.memory !== 0 ? bytesToString(mbToBytes(server.limits.memory)) : 'Unlimited';
-    const cpuLimit = server.limits.cpu !== 0 ? server.limits.cpu + ' %' : 'Unlimited';
+    const diskLimit = server.limits.disk !== 0 ? bytesToString(mbToBytes(server.limits.disk)) : 'Неограниченный';
+    const memoryLimit = server.limits.memory !== 0 ? bytesToString(mbToBytes(server.limits.memory)) : 'Неограниченный';
+    const cpuLimit = server.limits.cpu !== 0 ? server.limits.cpu + ' %' : 'Неограниченный';
 
     return (
         <StatusIndicatorBox as={Link} to={`/server/${server.id}`} className={className} $status={stats?.status}>
@@ -127,12 +127,12 @@ export default ({ server, className }: { server: Server; className?: string }) =
                         <div css={tw`flex-1 text-center`}>
                             <span css={tw`bg-neutral-500 rounded px-2 py-1 text-neutral-100 text-xs`}>
                                 {server.isTransferring
-                                    ? 'Transferring'
+                                    ? 'Перенос'
                                     : server.status === 'installing'
-                                    ? 'Installing'
+                                    ? 'Установка'
                                     : server.status === 'restoring_backup'
-                                    ? 'Restoring Backup'
-                                    : 'Unavailable'}
+                                    ? 'Восстановление резервной копии'
+                                    : 'Недоступен'}
                             </span>
                         </div>
                     ) : (
