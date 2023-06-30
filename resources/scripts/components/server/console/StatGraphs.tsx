@@ -16,9 +16,9 @@ export default () => {
     const limits = ServerContext.useStoreState((state) => state.server.data!.limits);
     const previous = useRef<Record<'tx' | 'rx', number>>({ tx: -1, rx: -1 });
 
-    const cpu = useChartTickLabel('CPU', limits.cpu, '%', 2);
-    const memory = useChartTickLabel('Memory', limits.memory, 'MiB');
-    const network = useChart('Network', {
+    const cpu = useChartTickLabel('Процессор', limits.cpu, '%', 2);
+    const memory = useChartTickLabel('Оперативная память', limits.memory, 'МиБ');
+    const network = useChart('Сеть', {
         sets: 2,
         options: {
             scales: {

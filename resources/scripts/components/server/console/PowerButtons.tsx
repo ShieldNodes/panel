@@ -43,7 +43,7 @@ export default ({ className }: PowerButtonProps) => {
                 hideCloseIcon
                 onClose={() => setOpen(false)}
                 title={'Принудительно остановить процесс'}
-                confirm={'Продолжать'}
+                confirm={'Продолжить'}
                 onConfirmed={onButtonClick.bind(this, 'kill-confirmed')}
             >
                 Принудительная остановка сервера может привести к повреждению данных.
