@@ -35,9 +35,9 @@ const StatusIndicatorBox = styled(GreyRowBox)<{ $status: ServerPowerState | unde
         height: calc(100% - 0.5rem);
 
         ${({ $status }) =>
-            !$status || $status === 'offline'
+            !$status || $status === 'оффлайн'
                 ? tw`bg-red-500`
-                : $status === 'running'
+                : $status === 'запущенный'
                 ? tw`bg-green-500`
                 : tw`bg-yellow-500`};
     }
