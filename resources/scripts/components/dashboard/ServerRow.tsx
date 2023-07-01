@@ -35,9 +35,9 @@ const StatusIndicatorBox = styled(GreyRowBox)<{ $status: ServerPowerState | unde
         height: calc(100% - 0.5rem);
 
         ${({ $status }) =>
-            !$status || $status === 'оффлайн'
+            !$status || $status === 'offline'
                 ? tw`bg-red-500`
-                : $status === 'запущенный'
+                : $status === 'running'
                 ? tw`bg-green-500`
                 : tw`bg-yellow-500`};
     }
@@ -84,9 +84,9 @@ export default ({ server, className }: { server: Server; className?: string }) =
         alarms.disk = server.limits.disk === 0 ? false : isAlarmState(stats.diskUsageInBytes, server.limits.disk);
     }
 
-    const diskLimit = server.limits.disk !== 0 ? bytesToString(mbToBytes(server.limits.disk)) : 'Неограниченный';
-    const memoryLimit = server.limits.memory !== 0 ? bytesToString(mbToBytes(server.limits.memory)) : 'Неограниченный';
-    const cpuLimit = server.limits.cpu !== 0 ? server.limits.cpu + ' %' : 'Неограниченный';
+    const diskLimit = server.limits.disk !== 0 ? bytesToString(mbToBytes(server.limits.disk)) : 'Неограниченно';
+    const memoryLimit = server.limits.memory !== 0 ? bytesToString(mbToBytes(server.limits.memory)) : 'Неограниченно';
+    const cpuLimit = server.limits.cpu !== 0 ? server.limits.cpu + ' %' : 'Неограниченно';
 
     return (
         <StatusIndicatorBox as={Link} to={`/server/${server.id}`} className={className} $status={stats?.status}>
@@ -120,7 +120,7 @@ export default ({ server, className }: { server: Server; className?: string }) =
                     isSuspended ? (
                         <div css={tw`flex-1 text-center`}>
                             <span css={tw`bg-red-500 rounded px-2 py-1 text-red-100 text-xs`}>
-                                {server.status === 'suspended' ? 'Suspended' : 'Connection Error'}
+                                {server.status === 'suspended' ? 'Приостановлен' : 'Ошибка подключения'}
                             </span>
                         </div>
                     ) : server.isTransferring || server.status ? (
