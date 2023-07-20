@@ -48,7 +48,7 @@ export default () => {
     }
 
     return (
-        <ServerContentBlock title={'Users'}>
+        <ServerContentBlock title={'Суб-пользователи'}>
             <FlashMessageRender byKey={'users'} css={tw`mb-4`} />
             {!subusers.length ? (
                 <p css={tw`text-center text-sm text-neutral-300`}>Похоже, у вас нет суб-пользователей.</p>
