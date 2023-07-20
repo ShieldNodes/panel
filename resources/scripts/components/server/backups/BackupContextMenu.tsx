@@ -125,7 +125,7 @@ export default ({ backup }: Props) => {
                 title={`Разблокировать "${backup.name}"`}
                 onConfirmed={onLockToggle}
             >
-                Эта резервная копия больше не будет защищена от автоматического или случайного удаления..
+                Эта резервная копия больше не будет защищена от автоматического или случайного удаления.
             </Dialog.Confirm>
             <Dialog.Confirm
                 open={modal === 'restore'}
@@ -153,7 +153,7 @@ export default ({ backup }: Props) => {
                 </p>
             </Dialog.Confirm>
             <Dialog.Confirm
-                title={`Удалить "${backup.name}"`}
+                title={`Удаление "${backup.name}"`}
                 confirm={'Продолжить'}
                 open={modal === 'delete'}
                 onClose={() => setModal('')}
