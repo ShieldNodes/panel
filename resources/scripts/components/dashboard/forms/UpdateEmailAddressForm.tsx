@@ -66,7 +66,7 @@ export default () => {
                             />
                         </div>
                         <div css={tw`mt-6`}>
-                            <Button disabled={isSubmitting || !isValid}>Update Email</Button>
+                            <Button disabled={isSubmitting || !isValid}>Обновить электронную почту</Button>
                         </div>
                     </Form>
                 </React.Fragment>

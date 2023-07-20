@@ -32,7 +32,7 @@ export default () => {
     }, [error]);
 
     return (
-        <ServerContentBlock title={'Журнал активности'}>
+        <ServerContentBlock title={'Активность'}>
             <FlashMessageRender byKey={'server:activity'} />
             {(filters.filters?.event || filters.filters?.ip) && (
                 <div className={'flex justify-end mb-2'}>

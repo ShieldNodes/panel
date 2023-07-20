@@ -23,7 +23,7 @@ export default () => {
     const sftp = ServerContext.useStoreState((state) => state.server.data!.sftpDetails, isEqual);
 
     return (
-        <ServerContentBlock title={'Settings'}>
+        <ServerContentBlock title={'Настройки'}>
             <FlashMessageRender byKey={'settings'} css={tw`mb-4`} />
             <div css={tw`md:flex`}>
                 <div css={tw`w-full md:flex-1 md:mr-10`}>
