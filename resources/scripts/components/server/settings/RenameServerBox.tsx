@@ -35,7 +35,7 @@ const RenameServerBox = () => {
                     </FormikFieldWrapper>
                 </div>
                 <div css={tw`mt-6 text-right`}>
-                    <Button type={'submit'}>Сохранять</Button>
+                    <Button type={'submit'}>Сохранить</Button>
                 </div>
             </Form>
         </TitledGreyBox>
