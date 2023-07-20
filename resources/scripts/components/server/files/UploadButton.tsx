@@ -65,7 +65,7 @@ export default ({ className }: WithClassname) => {
         clearAndAddHttpError();
         const list = Array.from(files);
         if (list.some((file) => !file.size || (!file.type && file.size === 4096))) {
-            return addError('В настоящее время загрузка папок не поддерживается..', 'Ошибка');
+            return addError('В настоящее время загрузка папок не поддерживается.', 'Ошибка!');
         }
 
         const uploads = list.map((file) => {
