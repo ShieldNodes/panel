@@ -72,7 +72,7 @@ export default () => {
             })}
         >
             {({ isSubmitting, setSubmitting, submitForm }) => (
-                <LoginFormContainer title={'Request Password Reset'} css={tw`w-full flex`}>
+                <LoginFormContainer title={'Запросить сброс пароля'} css={tw`w-full flex`}>
                     <Field
                         light
                         label={'Электронная почта'}
