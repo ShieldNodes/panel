@@ -44,7 +44,7 @@ const BackupContainer = () => {
                             <p css={tw`text-center text-sm text-neutral-300`}>
                                 {page > 1
                                     ? "Похоже, у нас закончились резервные копии, чтобы показать вам, попробуйте вернуться на страницу назад."
-                                    : 'Похоже, что в настоящее время для этого сервера нет резервных копий..'}
+                                    : 'Похоже, что в настоящее время для этого сервера нет резервных копий.'}
                             </p>
                         )
                     ) : (
@@ -63,7 +63,7 @@ const BackupContainer = () => {
                 <div css={tw`mt-6 sm:flex items-center justify-end`}>
                     {backupLimit > 0 && backups.backupCount > 0 && (
                         <p css={tw`text-sm text-neutral-300 mb-4 sm:mr-6 sm:mb-0`}>
-                            {backups.backupCount} из {backupLimit} резервных копии были созданы для этого сервера.
+                            {backups.backupCount} из {backupLimit} резервных копий были созданы для этого сервера.
                         </p>
                     )}
                     {backupLimit > 0 && backupLimit > backups.backupCount && (

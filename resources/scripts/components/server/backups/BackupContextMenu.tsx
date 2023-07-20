@@ -131,12 +131,12 @@ export default ({ backup }: Props) => {
                 open={modal === 'restore'}
                 onClose={() => setModal('')}
                 confirm={'Восстановить'}
-                title={`Восстановить "${backup.name}"`}
+                title={`Восстановление "${backup.name}"`}
                 onConfirmed={() => doRestorationAction()}
             >
                 <p>
-                    Ваш сервер будет остановлен. Вы не сможете контролировать состояние питания, получить доступ к файлу
-                    менеджер или создавать дополнительные резервные копии до завершения.
+                    Ваш сервер будет остановлен. Вы не сможете контролировать состояние питания, получить доступ к файловому
+                    менеджеру или создавать дополнительные резервные копии до завершения процесса.
                 </p>
                 <p css={tw`mt-4 -mb-2 bg-gray-700 p-3 rounded`}>
                     <label htmlFor={'restore_truncate'} css={tw`text-base flex items-center cursor-pointer`}>
@@ -148,7 +148,7 @@ export default ({ backup }: Props) => {
                             checked={truncate}
                             onChange={() => setTruncate((s) => !s)}
                         />
-                        Удалите все файлы перед восстановлением резервной копии.
+                        Удалить все файлы перед восстановлением резервной копии.
                     </label>
                 </p>
             </Dialog.Confirm>
@@ -194,7 +194,7 @@ export default ({ backup }: Props) => {
                                         icon={backup.isLocked ? faUnlock : faLock}
                                         css={tw`text-xs mr-2`}
                                     />
-                                    {backup.isLocked ? 'Unlock' : 'Lock'}
+                                    {backup.isLocked ? 'Разблокировать' : 'Заблокировать'}
                                 </DropdownButtonRow>
                                 {!backup.isLocked && (
                                     <DropdownButtonRow danger onClick={() => setModal('delete')}>
