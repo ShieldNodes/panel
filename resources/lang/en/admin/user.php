@@ -2,10 +2,10 @@
 
 return [
     'exceptions' => [
-        'user_has_servers' => 'Cannot delete a user with active servers attached to their account. Please delete their servers before continuing.',
+        'user_has_servers' => 'Невозможно удалить пользователя с активными серверами, привязанными к его учетной записи. Пожалуйста, удалите его серверы перед продолжением.',
     ],
     'notices' => [
-        'account_created' => 'Account has been created successfully.',
-        'account_updated' => 'Account has been successfully updated.',
+        'account_created' => 'Учетная запись была успешно создана.',
+        'account_updated' => 'Учетная запись была успешно обновлена.',
     ],
 ];

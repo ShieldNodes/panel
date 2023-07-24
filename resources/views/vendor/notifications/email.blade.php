@@ -95,14 +95,14 @@ $style = [
                                             @endif
                                         </h1>
 
-                                        <!-- Intro -->
+                                        <!-- Введение -->
                                         @foreach ($introLines as $line)
                                             <p style="{{ $style['paragraph'] }}">
                                                 {{ $line }}
                                             </p>
                                         @endforeach
 
-                                        <!-- Action Button -->
+                                        <!-- Кнопка действия -->
                                         @if (isset($actionText))
                                             <table style="{{ $style['body_action'] }}" align="center" width="100%" cellpadding="0" cellspacing="0">
                                                 <tr>
@@ -131,26 +131,26 @@ $style = [
                                             </table>
                                         @endif
 
-                                        <!-- Outro -->
+                                        <!-- Другое -->
                                         @foreach ($outroLines as $line)
                                             <p style="{{ $style['paragraph'] }}">
                                                 {{ $line }}
                                             </p>
                                         @endforeach
 
-                                        <!-- Salutation -->
+                                        <!-- Приветствие -->
                                         <p style="{{ $style['paragraph'] }}">
-                                            Regards,<br>{{ config('app.name') }}
+                                            С уважением,<br>{{ config('app.name') }}
                                         </p>
 
-                                        <!-- Sub Copy -->
+                                        <!-- Подкопия -->
                                         @if (isset($actionText))
                                             <table style="{{ $style['body_sub'] }}">
                                                 <tr>
                                                     <td style="{{ $fontFamily }}">
                                                         <p style="{{ $style['paragraph-sub'] }}">
-                                                            If you’re having trouble clicking the "{{ $actionText }}" button,
-                                                            copy and paste the URL below into your web browser:
+                                                            Если у вас возникли проблемы с нажатием кнопки "{{ $actionText }}",
+                                                            скопируйте и вставьте приведенный ниже URL-адрес в свой веб-браузер:
                                                         </p>
 
                                                         <p style="{{ $style['paragraph-sub'] }}">
@@ -168,7 +168,7 @@ $style = [
                         </td>
                     </tr>
 
-                    <!-- Footer -->
+                    <!--Нижний колонтитул -->
                     <tr>
                         <td>
                             <table style="{{ $style['email-footer'] }}" align="center" width="570" cellpadding="0" cellspacing="0">
@@ -177,7 +177,7 @@ $style = [
                                         <p style="{{ $style['paragraph-sub'] }}">
                                             &copy; {{ date('Y') }}
                                             <a style="{{ $style['anchor'] }}" href="{{ url('/') }}" target="_blank">{{ config('app.name') }}</a>.
-                                            All rights reserved.
+                                            Все права защищены.
                                         </p>
                                     </td>
                                 </tr>
